@@ -29,7 +29,7 @@ MyMarketplace is an e-commerce web application developed with **Angular 13** and
 ## 🔧 Installation & Setup  
 To run the project locally, follow these steps:  
 
-### 1️⃣ Clone the repository  
+1️⃣ Clone the repository  
 ```sh
 git clone https://github.com/your-username/MyMarketplace.git
 cd MyMarketplace
