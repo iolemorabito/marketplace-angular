@@ -1,4 +1,4 @@
-# 🛍 MyMarketplace - A Modern Online Shopping Platform
+# 🛍 MyMarketplace
 
 ## 🌟 Overview  
 MyMarketplace is an e-commerce web application developed with **Angular 13** and **TypeScript**, featuring a **user-friendly interface**, **admin management**, and **secure authentication system**. Users can **browse**, **add products to their cart**, and **manage orders**, while admins have special privileges to manage users and inventory.
