@@ -1,0 +1,61 @@
+
+<div class="product-form-container">
+  <h2>🛒 Aggiungi un Nuovo Prodotto</h2>
+
+  <form [formGroup]="productForm" (ngSubmit)="saveProduct()">
+    
+    <div class="form-group">
+      <label for="name">Nome:</label>
+      <input id="name" type="text" formControlName="name" required>
+      <small class="warning" *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched">
+        ⚠️ 
+        <span *ngIf="productForm.get('name')?.errors?.['required']">Il nome è obbligatorio.</span>
+        <span *ngIf="productForm.get('name')?.errors?.['pattern']">Il nome può contenere solo lettere e spazi.</span>
+      </small>
+    </div>
+    
+    
+
+    <div class="form-group">
+      <label for="price">Prezzo (€):</label>
+      <input id="price" type="number" formControlName="price" required>
+      <small class="warning" *ngIf="productForm.get('price')?.invalid && productForm.get('price')?.touched">
+        ⚠️ 
+        <span *ngIf="productForm.get('price')?.errors?.['required']">Il prezzo è obbligatorio.</span>
+        <span *ngIf="productForm.get('price')?.errors?.['pattern']">Inserisci un numero valido.</span>
+        <span *ngIf="productForm.get('price')?.errors?.['min']">Il prezzo deve essere positivo.</span>
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label for="category">Categoria:</label>
+      <select id="category" formControlName="category">
+        <option value="" disabled selected></option>
+        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+      </select>
+      <small class="warning" *ngIf="productForm.get('category')?.invalid && productForm.get('category')?.touched">
+        ⚠️ Seleziona una categoria.
+      </small>
+    </div>
+
+    <div class="form-group textarea-container">
+      <label for="description">Descrizione:</label>
+      <textarea id="description" formControlName="description" maxlength="100" (input)="updateCharCount()"></textarea>
+      <span class="char-limit">{{ charCount }}/100</span>
+    </div>
+
+    <div class="form-group">
+      <label for="image">Seleziona un'immagine:</label>
+      <input type="file" id="image" (change)="onFileSelected($event)" accept="image/*">
+      <div *ngIf="selectedImage" class="image-preview">
+        <img [src]="selectedImage" alt="Anteprima immagine">
+      </div>
+    </div>
+
+    <!-- Pulsanti allineati -->
+    <div class="form-buttons">
+      <button type="submit" class="submit-button">Aggiungi Prodotto</button>
+      <button type="button" class="cancel-button" (click)="cancel()">Annulla</button>
+    </div>
+  </form>
+</div>

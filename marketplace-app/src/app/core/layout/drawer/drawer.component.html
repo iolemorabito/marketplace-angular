@@ -1,0 +1,41 @@
+<button class="drawer-button" [class.drawer-open]="isOpen" (click)="toggleDrawer()">☰</button>
+
+<div class="drawer" [class.open]="isOpen">
+  <nav>
+    <h3 class="menu-item"><a routerLink="/" (click)="toggleDrawer()">Home</a></h3>
+
+    <!-- Prodotti con Freccia -->
+    <h4 class="menu-item" (click)="toggleProductSubMenu()">
+      Prodotti
+      <span class="arrow" [class.rotated]="isProductSubMenuOpen">▼</span>
+    </h4>
+
+    <!-- Sottomenu di Prodotti -->
+    <ul *ngIf="isProductSubMenuOpen" class="sub-menu">
+      <li><a routerLink="/products" (click)="toggleDrawer()">📦 I nostri Prodotti</a></li>
+      <li><a routerLink="/products/add" (click)="toggleDrawer()">➕ Inserisci Prodotto</a></li>
+    </ul>
+
+    <!-- Categorie con Freccia -->
+    <h4 class="menu-item" (click)="toggleCategorySubMenu()">
+      Categorie
+      <span class="arrow" [class.rotated]="isCategorySubMenuOpen">▼</span>
+    </h4>
+
+    <!-- Sottomenu delle Categorie -->
+    <ul *ngIf="isCategorySubMenuOpen" class="sub-menu">
+      <li><a routerLink="/products" [queryParams]="{ category: 'Abbigliamento' }" (click)="toggleDrawer()">👕 Abbigliamento</a></li>
+      <li><a routerLink="/products" [queryParams]="{ category: 'Elettronica' }" (click)="toggleDrawer()">📱 Elettronica</a></li>
+      <li><a routerLink="/products" [queryParams]="{ category: 'Casa e Giardino' }" (click)="toggleDrawer()">🏠 Casa e Giardino</a></li>
+      <li><a routerLink="/products" [queryParams]="{ category: 'Videogiochi' }" (click)="toggleDrawer()">🎮 Videogiochi</a></li>
+    </ul>
+
+    <h4 class="menu-item">
+      <a routerLink="/chisiamo" (click)="toggleDrawer()">Chi Siamo</a>
+    </h4>
+
+    <h4 class="menu-item">
+      <a routerLink="/contatti" (click)="toggleDrawer()">Contatti</a>
+    </h4>
+  </nav>
+</div>

@@ -1,0 +1,100 @@
+.product-list-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  max-width: 300px;
+  min-height: 400px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-details button{
+  margin-bottom: 15px;
+}
+
+.product-image {
+  width: 100%;
+  max-width: 200px;
+  height: 180px;
+  object-fit: contain; /* ✅ Evita distorsioni nelle immagini */
+  margin-bottom: 10px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #22577a;
+  margin-top: 10px;
+  min-height: 50px;
+  text-align: center;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.product-description{
+  color: #0d202e;
+  
+}
+
+h2{
+color:white
+}
+
+
+.delete-button {
+  background: #e63946;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  max-width: 120px;
+  align-self: center; /* ✅ Allinea il bottone */
+  margin-top: auto; /* ✅ Lo porta in basso */
+}
+
+.delete-button:hover {
+  background: #c71d2b;
+}
+

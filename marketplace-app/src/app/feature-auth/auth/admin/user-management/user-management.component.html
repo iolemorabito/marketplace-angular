@@ -1,0 +1,28 @@
+<div class="user-management-container">
+    <h2>👥 Gestione Utenti</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Cognome</th>
+          <th>Email</th>
+          <th>Data di Nascita</th>
+          <th>Ruolo</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.name }}</td>
+          <td>{{ user.surname }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.birthdate }}</td>
+          <td>{{ user.email === 'mkplace@admin.it' ? 'Admin' : 'User' }}</td>
+          <td>
+            <button class="delete-user" *ngIf="user.email !== 'mkplace@admin.it'" (click)="removeUser(user.email)" title="Elimina utente">❌</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

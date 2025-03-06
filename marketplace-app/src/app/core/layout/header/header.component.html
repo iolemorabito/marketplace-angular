@@ -1,0 +1,30 @@
+<header class="header">
+  <h1>MyMarketplace</h1>
+
+  <div class="header-icons">
+    <!-- Icona Carrello -->
+    <button *ngIf="!isAdmin" class="icon-button">
+      <a routerLink="/cart">
+        <img src="assets/cart.png" alt="Carrello">
+      </a>
+    </button>
+    <div class="user-icon-container">
+      <!-- Icona Utente -->
+      <button class="icon-button" (click)="toggleDropdown()">
+        <img src="assets/user.png" alt="Profilo">
+      </button>
+
+    <!-- Dropdown Utente -->
+      <div class="user-dropdown" *ngIf="showDropdown">
+        <p>Benvenuto, <strong>{{ userName ? userName : 'Ospite' }}</strong>!</p>
+        <button (click)="logout()">Logout</button>
+      </div>
+      
+  </div>
+  <div class="header-icons">
+    <button class="icon-button" *ngIf="isAdmin">
+      <a routerLink="/admin">Admin Panel</a>
+    </button>
+  </div>
+  </div>
+</header>

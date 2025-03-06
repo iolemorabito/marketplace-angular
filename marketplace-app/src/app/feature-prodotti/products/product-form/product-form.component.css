@@ -1,0 +1,266 @@
+/* Contenitore principale */
+.product-form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* Titolo */
+.product-form-container h2 {
+    font-size: 24px; /* 📏 Ingrandito */
+    color: #003049;
+    margin-bottom: 20px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Etichette */
+label {
+    font-size: 18px; /* 📏 Ingrandito */
+    font-weight: 600;
+    color: #22577a;
+    text-align: left;
+}
+
+/* Input e textarea */
+input, textarea {
+    padding: 12px;
+    border: 2px solid #669bbc;
+    border-radius: 5px;
+    font-size: 16px; /* 📏 Ingrandito */
+    font-family: 'Lato', sans-serif;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Pulsante */
+.submit-button {
+    background: #22577a;
+    color: white;
+    font-size: 18px; /* 📏 Ingrandito */
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-button:hover {
+    background: #669bbc;
+}
+
+/* Stile dropdown */
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #669bbc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    background-color: white;
+    cursor: pointer;
+    color: #003049;
+}
+
+/* Effetto quando l'utente passa sopra */
+select:hover {
+    border-color: #669bbc;
+}
+
+/* Impostazione del valore predefinito */
+option:disabled {
+    color: #669bbc;
+}
+
+select option {
+    background-color: white; 
+    color: #003049; 
+    font-size: 16px;
+}
+
+/* Effetto al passaggio del mouse sulle opzioni */
+select option:hover {
+    background-color: #669bbc; 
+    color:#003049; 
+}
+
+/* Rimuove il colore blu di default */
+select:focus {
+    outline: none;
+    border-color: #669bbc; 
+}
+
+/* Stile per l'input file */
+input[type="file"] {
+    padding: 10px;
+    border: 2px solid #669bbc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: white;
+    cursor: pointer;
+}
+
+/* Anteprima immagine */
+.image-preview {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.image-preview img {
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Stile errori */
+.error {
+    color: #e63946;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Stile input errati */
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+    border: 2px solid #e63946;
+    background: #ffebee;
+}
+
+
+  /* Stile per i warning */
+.warning {
+    display: block;
+    color: #d9534f;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: left;
+  }
+  
+  /* Stile per il limite di caratteri */
+  .char-limit {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  /* Stile per la disposizione dei bottoni */
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Stile pulsante "Aggiungi Prodotto" */
+  .submit-button {
+    background: #22577a;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+  
+  .submit-button:hover {
+    background: #38a3a5;
+  }
+  
+  /* Stile pulsante "Annulla" */
+  .cancel-button {
+    background: #d9534f;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+  
+  .cancel-button:hover {
+    background: #c9302c;
+  }
+  
+  /* Stile per le etichette */
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Allineamento degli input sotto il titolo */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Stile per il contatore caratteri dentro il box */
+  .textarea-container {
+    position: relative;
+  }
+  
+  .char-limit {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 12px;
+    color: #22577a;
+  }
+  
+  /* Stile per la disposizione dei bottoni */
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Stile pulsante "Aggiungi Prodotto" */
+  .submit-button {
+    background: #22577a;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+  
+  .submit-button:hover {
+    background: #38a3a5;
+  }
+  
+  /* Stile pulsante "Annulla" */
+  .cancel-button {
+    background: #d9534f;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+  
+  .cancel-button:hover {
+    background: #c9302c;
+  }
+  

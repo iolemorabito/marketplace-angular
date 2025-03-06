@@ -1,0 +1,46 @@
+<app-header></app-header>
+<app-drawer></app-drawer>
+
+<div class="contact-container">
+  <h2>Contattaci</h2>
+
+  <div class="contact-info">
+    <div class="info-card">
+      <h3>📍 Indirizzo</h3>
+      <p>Via Emanuele Gianturco 23, Napoli</p>
+    </div>
+    <div class="info-card">
+      <h3>📧 Email</h3>
+      <p>supporto&#64;mymarketplace.com</p>
+    </div>
+    <div class="info-card">
+      <h3>📞 Telefono</h3>
+      <p>+39 123 456 789</p>
+    </div>
+  </div>
+
+  <!-- Google Maps Embed -->
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3018.1712540262274!2d14.284229575505444!3d40.84616372939222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133ba78a85e55cf3%3A0xd5e25912ea259880!2sVia%20Emanuele%20Gianturco%2C%2023%2C%2080142%20Napoli%20NA!5e0!3m2!1sit!2sit!4v1740061937649!5m2!1sit!2sit" 
+      width="100%" 
+      height="300" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="contact-form">
+    <h3>✉️ Scrivici un messaggio</h3>
+    <form (submit)="sendMessage()">
+      <input type="text" placeholder="Nome" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Messaggio" required></textarea>
+      <button type="submit">Invia</button>
+    </form>
+  </div>
+</div>
+
+<app-footer></app-footer>

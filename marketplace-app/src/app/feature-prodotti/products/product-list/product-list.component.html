@@ -1,0 +1,27 @@
+<app-header></app-header> 
+<app-drawer></app-drawer>
+
+<div class="product-list-container">
+  <h2>📦 I Nostri Prodotti</h2>
+  
+  <div class="product-grid">
+      <div class="product-card" *ngFor="let product of filteredProducts">
+          
+          <img *ngIf="product.image" [src]="'assets/images/' + product.image" alt="{{ product.name }}" class="product-image">
+          
+          <div class="product-details">
+              <h3>{{ product.name }}</h3>
+              <p class="product-description">{{ product.description }}</p>
+              <p class="product-price">€{{ product.price }}</p>
+              
+              <div class="button-container">
+                <button *ngIf="!isAdmin" class="add-to-cart-button" (click)="addToCart(product)">🛒 Aggiungi al carrello</button>
+
+                  <button *ngIf="isAdmin" class="delete-button" (click)="deleteProduct(product.id)">❌ Rimuovi</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

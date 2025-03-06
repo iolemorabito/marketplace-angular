@@ -1,0 +1,15 @@
+.footer {
+  background-color: #22577a;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.social-icons img {
+  width: 25px;
+  margin: 0 10px;
+}

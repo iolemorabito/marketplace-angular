@@ -1,0 +1,59 @@
+
+.main-layout {
+    /* background: url('src/assets/background.png') no-repeat center center fixed; */
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Contenitore principale */
+.main-content {
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(33, 54, 89, 0.5); /* Sfondo semi-trasparente */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    position: absolute; /* Permette il centramento */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; 
+}
+
+/* Titolo */
+.main-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Sottotitolo */
+.main-content p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* Pulsante */
+.explore-button {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    background: #38a3a5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.explore-button:hover {
+    background: #22577a;
+}
